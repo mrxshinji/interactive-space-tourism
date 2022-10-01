@@ -36,8 +36,10 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 
 ### Links
 
-- Solution URL: https://github.com/mrxshinji/sunnyside-landing-page
-- Live Site URL: https://mrxshinji.github.io/sunnyside-landing-page
+- Solution URL: https://github.com/mrxshinji/interactive-space-tourism
+
+- Live Site URL: https://mrxshinji.github.io/interactive-space-tourism
+
 
 
 ## My process
