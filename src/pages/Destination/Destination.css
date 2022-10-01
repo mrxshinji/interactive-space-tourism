@@ -1,0 +1,233 @@
+@import '../../App.css';
+
+#destination {
+    background-image: url(../../../public/assets/destination/background-destination-mobile.jpg);
+    align-content: center;
+    display: grid;
+    grid-template-columns: 100%;
+    min-height: 120vh;
+}
+
+.planet {
+    position: relative;
+    margin-bottom: 35px;
+    grid-row: 2 / 3
+}
+
+.planet img {
+    width: 170px;
+    height: 170px;
+}
+
+.destination-nav {
+    margin-bottom: 50px;
+    grid-row: 3 / 4
+}
+
+.destination-menu {
+    gap: 30px;
+}
+
+.destination-item {
+    position: relative;
+    cursor: pointer;
+    color: var(--textBlue);
+    font-family: var(--BarlowCondensed);
+    font-size: 14px;
+    letter-spacing: 2.36px;
+}
+
+.destination-item.active {
+    color: var(--textWhite);
+}
+
+.destination-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--textWhite);
+}
+
+.planet-text h2 {
+    font-size: 56px;
+    margin-bottom: 5px;
+}
+
+.planet-text p {
+    margin: 0 5%;
+}
+
+hr {
+    margin: 5% 5%;
+    border: none;
+    height: 1px;
+    background-color: #383B4B;
+}
+
+.details h3 {
+    color: var(--textBlue);
+    font-family: var(--Barlow);
+    letter-spacing: 2.36;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.details p {
+    color: var(--textWhite);
+    font-family: var(--Bellefair);
+    letter-spacing: 2.36;
+    font-size: 28px;
+}
+
+.distance {
+    margin-bottom: 30px;
+}
+
+.time {
+    margin-bottom: 2rem;
+}
+
+@media only screen and (min-width:430px) {
+
+    #destination {
+        height: 100vh;
+        min-height: auto;
+        background-image: url(../../../public/assets/destination/background-destination-tablet.jpg);
+        align-content: center;
+        justify-content: center;
+    }
+
+    .heading {
+        margin-top: 0rem;
+        margin-bottom: 3rem;
+    }
+
+    .planet img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .planet {
+        position: relative;
+        margin-bottom: 5%;
+    }
+
+    .destination-nav {
+        margin-bottom: 30px;
+    }
+
+    .destination-menu {
+        gap: 45px;
+    }
+
+    .destination-item {
+        font-size: 16px;
+        letter-spacing: 2.7px;
+    }
+
+    .planet-text h2 {
+        font-size: 80px;
+        margin-bottom: 0;
+    }
+
+    .planet-text p {
+        margin: 0 15%;
+    }
+
+    .details {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 15%;
+        margin-bottom: 2rem;
+    }
+
+    .distance {
+        margin-bottom: 0px;
+    }
+
+    .time {
+        margin-bottom: 0rem;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    #destination {
+        height: 100vh;
+        background-image: url(../../../public/assets/destination/background-destination-desktop.jpg);
+        grid-template-columns: 50% 50%;
+        padding: 5% 0 5% 0;
+        align-content: center;
+        justify-content: center;
+        grid-template-rows: min-content;
+        grid-auto-rows: minmax(1px, auto)
+    }
+
+    #destination .heading {
+        margin-top: 0;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-bottom: 0;
+    }
+
+    .planet {
+        margin: 5% 0 10% 0;
+        grid-column: 1/2;
+        grid-row: 2/5;
+        width: 100%;
+    }
+
+    .planet img {
+        width: 30vw;
+        max-width: 600px;
+        height: 30vw;
+        max-height: 600px;
+    }
+
+    .destination-nav {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin: 5% 0;
+    }
+
+    .destination-item {
+        font-size: 1.2vw;
+        letter-spacing: .2vw;
+        
+    }
+
+    .planet-text {
+        grid-row: 2/4;
+    }
+
+    .planet-text h2 {
+        font-size: 7vw;
+    }
+
+    #destination-next {
+        grid-column: 1 / 3;
+        grid-row: 5/6;
+    }
+
+    .planet-text p {
+        margin: 0 18%;
+    }
+
+    hr {
+        margin: 5% 18%;
+    }
+
+    .details h3 {
+        text-align: start;
+        font-size: 1vw;
+    }
+    
+    .details p {
+        text-align: start;
+        font-size: 2vw
+    }
+}

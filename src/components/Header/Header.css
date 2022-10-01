@@ -1,0 +1,152 @@
+@import '../../App.css';
+
+header {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    width: 100%;
+    
+}
+
+.navbar {
+    display: none;
+}
+
+.long {
+    display: none;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.sidebar-box {
+    z-index: 200;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -1px 5px 10px rgba(255, 255, 255, 0.1),
+    inset -10px 5px 30px rgba(255, 255, 255, 0.1),
+    inset -100px 5px 50px rgba(255, 255, 255, .1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5%;
+    gap: 90px;
+}
+
+.sidebar-box button {
+    align-self: flex-end;
+
+}
+
+.sidebar {
+    width: 100%;
+    display: flex;
+}
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 50px;
+}
+
+.side-item {
+    list-style: none;
+}
+
+.side-item a {
+    color: #fff;
+    font-family: var(--BarlowCondensed);
+    font-size: 16px;
+}
+
+@media only screen and (min-width:430px) {
+    #side-toggler {
+        display: none;
+    }
+
+    header {
+        padding: 0;
+        padding-left: 5%;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 450px;
+        height: 11vh;
+        background-color: rgba(255, 255, 255, 0.04);
+        gap: 30px
+    }
+
+    .nav-item {
+        height: 100%;
+    }
+
+    .nav-item a {
+        font-family: var(--BarlowCondensed);
+        color: var(--textWhite);
+        letter-spacing: 2.36px;
+        font-size: 14px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-item:hover {
+        filter: brightness(0.5);
+    }
+
+    .nav-item a.active {
+        border-bottom: 2px solid white;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .navbar {
+        width: 55vw;
+        gap: 1.5vw;
+    }
+
+    .navbar::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 35vw;
+        background-color: rgba(255, 255, 255, 0.25);
+        left: 0;
+        transform: translateX(-90%);
+    }
+
+    .short {
+        display: none;
+    }
+
+    .long {
+        display: block;
+    }
+
+    .nav-item a {
+        letter-spacing: 2.7px;
+        font-size: 1vw;
+    }
+}

@@ -1,0 +1,116 @@
+@import '../../App.css';
+
+#home {
+    background-image: url(../../../public/assets/home/background-home-mobile.jpg);
+
+}
+
+#text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+#text h2 {
+    font-size: 80px;
+}
+
+#text p {
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0 8%;
+}
+
+#explore {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#explore h3 {
+    font-family: var(--Bellefair);
+    color: var(--bgBlack);
+    font-size: 20;
+    letter-spacing: 1.25px;
+}
+
+@media only screen and (min-width:430px) {
+
+    #home {
+        background-image: url(../../../public/assets/home/background-home-tablet.jpg);;
+    }
+    
+    #text {
+        margin-top: 5rem;
+        gap: 15px;
+    }
+
+    #text h1 {
+        width: 100%;
+        font-size: 20px;
+        letter-spacing: 3.38px;
+    }
+
+    #text h2 {
+        font-size: 150px;
+    }
+
+    #text p {
+        font-size: 16px;
+        line-height: 28px;
+        width: 53vw;
+        margin: 0;
+    }
+
+    #explore {
+        width: 242px;
+        height: 242px;
+    }
+
+    #explore h3 {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    #home {
+        background-image: url(../../../public/assets/home/background-home-desktop.jpg);;
+    }
+
+    #text {
+        width: 60%;
+        text-align: start;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    #text h1 {
+        font-size: 2vw;
+        letter-spacing: 4.72px;
+    }
+
+    #text h2 {
+        font-size: 10vw;
+    }
+
+    #text p {
+        margin: 0 40% 0 0%;
+        font-size: 1.5vw;
+        line-height: 1.8vw;
+    }
+
+    #explore {
+        width: 19vw;
+        height: 19vw;
+    }
+
+    #explore h3 {
+        font-size: 2.3vw;
+    }
+}
