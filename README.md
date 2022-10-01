@@ -27,11 +27,11 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 
 - Mobile View
 
-![](./src/assets/images/for_readme/tablet.png)
+![](./public/assets/for_readme/tablet.png)
 
 - Mobile View
 
-![](./src/assets/images/for_readme/mobile.png)
+![](./public/assets/for_readme/mobile.png)
 
 
 ### Links

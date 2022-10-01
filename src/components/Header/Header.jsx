@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.css';
 import { useState } from "react"
 import { NavLink, Link } from "react-router-dom"
+import { CSSTransition } from 'react-transition-group';
 
 // props require toggleSidebar(func)
 export default function Header(props) {
@@ -33,7 +34,12 @@ export default function Header(props) {
                 </ul>
                 <button id='side-toggler' onClick={toggleSidebar}><img src={process.env.PUBLIC_URL + '/assets/shared/icon-hamburger.svg'} alt='menu icon' /></button>
             </div>
-            { sidebar && (
+            <CSSTransition
+                in={sidebar}
+                timeout={500}
+                classNames="slide-in"
+                unmountOnExit
+            >
             <div className='sidebar-box'>
                 <button onClick={toggleSidebar}><img src={process.env.PUBLIC_URL + '/assets/shared/icon-close.svg'}  alt='menu icon' /></button>
                 <nav className='sidebar'>
@@ -45,7 +51,7 @@ export default function Header(props) {
                     </ul>   
                 </nav>
             </div>
-            )}
+            </CSSTransition>
         </header>
     )
 }
